@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bibi Beauty | Makeup & Lashes Pretoria</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIBI Beauty Booking | Lashes & Makeup Pretoria</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#fff7fb;color:#222}
+header{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;z-index:100;box-shadow:0 1px 10px rgba(0,0,0,.05)}
+.logo{font-weight:700;font-size:20px;letter-spacing:1px}.logo span{color:#c26dbc}
+.btn-book{background:#7a4db8;color:#fff;padding:10px 18px;border-radius:25px;font-weight:600;font-size:13px;text-decoration:none}
+#sideMenu{position:fixed;top:0;left:0;width:78%;max-width:340px;height:100%;background:#ffe6f2;z-index:200;transform:translateX(-100%);transition:.3s ease;padding:22px 25px}
+#sideMenu.open{transform:translateX(0)}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;z-index:150}#overlay.show{display:block}
+.menu-link{display:flex;gap:12px;align-items:center;padding:15px 0;font-size:17px;color:#111;text-decoration:none;border-bottom:1px solid #f9d6ea}
+.section{padding:22px 20px}.service-card{display:flex;justify-content:space-between;background:#fff;border-radius:16px;padding:14px 16px;box-shadow:0 2px 12px rgba(0,0,0,.04);margin-bottom:10px}
+.portfolio{display:grid;grid-template-columns:1fr 1fr;gap:10px}.portfolio img{width:100%;height:210px;object-fit:cover;border-radius:18px}
+.social-bar{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:14px;background:#fff;padding:10px 18px;border-radius:40px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:90}
+.social-bar a{width:44px;height:44px;background:#f2c9ec;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none}
+</style>
 </head>
 <body>
-
-<nav>
-  <h2>BIBI BEAUTY</h2>
-  <a href="https://wa.me/27602783170" class="book-btn">Book Now</a>
-</nav>
-
-<section class="hero">
-  <h1>Slay Every Day</h1>
-  <p>Professional Makeup & Eyelash Extensions in Pretoria</p>
-  <a href="https://wa.me/27602783170" class="main-btn">Book on WhatsApp</a>
-</section>
-
-<section class="services">
-  <h2>Our Services & Prices</h2>
-  
-  <div class="price-box">
-    <h3>💄 Makeup</h3>
-    <ul>
-      <li><span>Natural Look</span> <span>R250</span></li>
-      <li><span>Soft Glam</span> <span>R300</span></li>
-      <li><span>Full Glam</span> <span>R350</span></li>
-    </ul>
+<div id="overlay" onclick="closeMenu()"></div>
+<div id="sideMenu">
+  <div style="text-align:center;margin-bottom:10px"><div style="font-size:28px">👁️</div><div style="font-weight:700;font-size:28px;letter-spacing:2px">BIBI</div><div style="color:#c26dbc;font-size:14px">Beauty Booking</div></div>
+  <a class="menu-link" href="#about" onclick="closeMenu()">ⓘ About</a>
+  <a class="menu-link" href="#services" onclick="closeMenu()">✂️ Services</a>
+  <a class="menu-link" href="#reviews" onclick="closeMenu()">☆ Reviews</a>
+  <a class="menu-link" href="#portfolio" onclick="closeMenu()">⊞ Portfolio</a>
+  <a class="menu-link" href="#contact" onclick="closeMenu()">✉️ Contact</a>
+</div>
+<header>
+  <button onclick="openMenu()" style="font-size:26px;background:none;border:none">☰</button>
+  <div class="logo">BIBI BEAUTY</div>
+  <a class="btn-book" href="https://wa.me/27602783170?text=Hi%20Bibi%20I%20want%20to%20book%20lashes%20💖">BOOK NOW</a>
+</header>
+<div id="about" style="padding:25px 20px;display:flex;gap:18px;background:#fff;align-items:center">
+  <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=300" style="width:90px;height:90px;border-radius:50%;object-fit:cover">
+  <div><span style="background:#f6e6f3;color:#7a3d74;padding:4px 10px;border-radius:20px;font-size:11px">Pretoria • Lashes & Makeup</span><h1 style="font-size:20px;margin-top:6px">BIBI Beauty Studio</h1><p style="font-size:13px;color:#666">Flawless lashes. Soft glam. Classic R250, Hybrid R300, Volume R350.</p></div>
+</div>
+<div class="section" id="services"><h2>Services</h2>
+  <div class="service-card"><div><strong>Classic Lashes</strong><div style="font-size:12px;color:#888">Natural • 2h</div></div><b style="color:#a24d9a">R250</b></div>
+  <div class="service-card"><div><strong>Hybrid Lashes</strong><div style="font-size:12px;color:#888">Most Popular • 2h30</div></div><b style="color:#a24d9a">R300</b></div>
+  <div class="service-card"><div><strong>Volume Lashes</strong><div style="font-size:12px;color:#888">Full Glam • 3h</div></div><b style="color:#a24d9a">R350</b></div>
+  <div class="service-card"><div><strong>Soft Glam Makeup</strong><div style="font-size:12px;color:#888">Facebeat • 1h</div></div><b style="color:#a24d9a">R250</b></div>
+</div>
+<div class="section" id="portfolio"><h2>Portfolio</h2><p style="font-size:12px;color:#b17cab;margin-bottom:12px">Lash & Makeup — our recent work</p>
+  <div class="portfolio">
+    <img src="https://images.unsplash.com/photo-1588516903720-8ceb67f9dd8d?q=80&w=500">
+    <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?q=80&w=500">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=500">
+    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=500">
   </div>
-
-  <div class="price-box">
-    <h3>👁️ Eyelash Extensions</h3>
-    <ul>
-      <li><span>Classic Set</span> <span>R200</span></li>
-      <li><span>Hybrid Set</span> <span>R250</span></li>
-      <li><span>Volume Set</span> <span>R300</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="contact">
-  <h2>Book Your Glow Up</h2>
-  <p>📍 Pretoria, Gauteng</p>
-  <p>📞 060 278 3170</p>
-  <p>⏰ Mon - Sat: 8am - 6pm | Sun: 9am - 4pm</p>
-  <a href="https://wa.me/27602783170" class="main-btn">Chat on WhatsApp</a>
-</section>
-
-<footer>
-  <p>© 2026 Bibi Beauty - All Rights Reserved</p>
-</footer>
-
+  <p style="text-align:center;font-size:12px;color:#8e6b9e;margin-top:12px">Showing 4 of 12 works • See more →</p>
+</div>
+<div class="section" id="reviews"><h2>Reviews</h2><div style="background:#fff;border-radius:18px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.04)"><div>★★★★★</div><p style="font-size:14px;margin-top:8px">“Bibi ate! My lashes lasted 3 weeks still fluffy. Best in PTA fr!”</p><div style="font-size:12px;color:#999;margin-top:6px">— Lerato M. • Hybrid Lashes</div></div></div>
+<div class="section" id="contact" style="padding-bottom:110px"><h2>Contact</h2><p style="font-size:14px;color:#666">Pretoria, Gauteng<br>060 278 3170 • WhatsApp to book instantly</p><a href="https://wa.me/27602783170?text=Hi%20Bibi%20I%20want%20to%20book%20💖" style="display:block;margin-top:14px;background:#111;color:#fff;text-align:center;padding:14px;border-radius:30px;text-decoration:none;font-weight:600">Message on WhatsApp</a></div>
+<div class="social-bar">
+  <a href="tel:0602783170">📞</a>
+  <a href="https://wa.me/27602783170">💬</a>
+  <a href="https://www.tiktok.com/">♪</a>
+</div>
+<script>function openMenu(){document.getElementById('sideMenu').classList.add('open');document.getElementById('overlay').classList.add('show')}function closeMenu(){document.getElementById('sideMenu').classList.remove('open');document.getElementById('overlay').classList.remove('show')}</script>
 </body>
 </html>
